@@ -4,13 +4,13 @@ import HeroBannerImage from '../assets/images/banner.png';
 const HeroBanner = () => {
   return (
     <Box sx={{
-      mt: { lg: '212px', xs: '70px' },
+      mt: { lg: '170px', xs: '70px' },
       ml: { sm: '50px' }
-    }} position="relative" p="20px">
+    }} position="relative" p="10px">
       <Typography color="#5E6F00" fontWeight="600" fontSize="56px">
           Navas Fitness
       </Typography>
-      <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="23px" mt="30px">
+      <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="13px" mt="15px">
         Suda, Sorridi <br /> e Ripeti
       </Typography>
       <Typography fontSize="22px" lineHeight="35px" mb={4}>
@@ -29,7 +29,7 @@ const HeroBanner = () => {
       >
         Exercise
       </Typography>
-      <img src={HeroBannerImage} alt="banner" className="hero-banner-img"/>
+      <img src={HeroBannerImage}  alt="banner" className="hero-banner-img"/>
     </Box>
   )
 }

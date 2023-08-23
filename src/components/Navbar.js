@@ -8,10 +8,10 @@ const Navbar = () => {
     <Stack
       direction="row"
       justifyContent="space-around"
-      sx={{ gap: { sm: '122px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent: 'none' }} px="20px" 
+      sx={{ gap: { sm: '122px', xs: '30px' }, mt: { sm: '32px', xs: '20px' }, justifyContent: 'none' }} px="20px" 
     >
       <Link to="/">
-        <img src={Logo} style={{ width: '58px', height: '58px', margin: '0 20px' }} alt="logo" />
+        <img src={Logo} style={{ width: '98px', height: '98px', margin: '0 20px', position:"relative" }} alt="logo" />
       </Link>
       <Stack
         direction="row"
