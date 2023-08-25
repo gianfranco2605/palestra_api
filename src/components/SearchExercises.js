@@ -32,7 +32,7 @@ const SearchExercises = ( {setExercises, bodyPart, setBodyPart } ) => {
 
   return (
     <Stack alignItems='center' mt='37px' justifyContent='center' p='20px'>
-      <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '30px', color: '#5E6F00' } }} mb='50px' textAlign='center' >Esercizi Imperdibili per la <br /> Tua Routine</Typography>
+      <Typography color="#6B6B6B" fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb='50px' textAlign='center' >Esercizi Imperdibili per la <br /> Tua Routine</Typography>
       <Box position='relative' mb='72px'>
         <TextField
           sx= {{
