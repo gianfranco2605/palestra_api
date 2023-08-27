@@ -13,7 +13,7 @@ const ExerciseCard = ({ exercise }) => {
 
       </Stack>
 
-      <Typography ml="21px" color= '#000' fontWeight="bold" mt="11px" pb="10px" textTransform="capitalize" fontSize="22px">
+      <Typography ml="21px" color= '#6B6B6B' fontWeight="bold" mt="11px" pb="10px" textTransform="capitalize" fontSize="22px">
         {exercise.name}
       </Typography>
 

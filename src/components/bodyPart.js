@@ -10,7 +10,7 @@ const BodyPart = ({ item, bodyPart, setBodyPart }) => {
       justifyContent="center"
       className="bodyPart-card"
       sx={{
-          borderTop: bodyPart === item ?  '4px solid #5E6F00' : '',
+          borderTop: bodyPart === item ?  '4px solid #6B6B6B' : '',
           backgroundColor: '#fff',
           borderBottomLeftRadius: '20px',
           width: '270px',

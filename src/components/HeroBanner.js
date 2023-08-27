@@ -8,7 +8,7 @@ const HeroBanner = () => {
       ml: { sm: '50px' }
     }} position="relative" p="10px">
       <Typography color="#5E6F00" fontWeight="600" fontSize="56px">
-          Navas Fitness
+          Barbati Fitness
       </Typography>
       <Typography color='#6B6B6B' fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="13px" mt="15px">
         Suda, Sorridi <br /> e Ripeti
