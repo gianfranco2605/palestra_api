@@ -15,7 +15,7 @@ const Navbar = () => {
       </Link>
       <Stack
         direction="row"
-        gap="40px"
+        gap="30px"
         fontSize="24px"
         alignItems="flex-end"
       >

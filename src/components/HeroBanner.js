@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import HeroBannerImage from '../assets/images/banner.png';
 
 const HeroBanner = () => {
@@ -8,7 +8,7 @@ const HeroBanner = () => {
       ml: { sm: '50px' }
     }} position="relative" p="10px">
       <Typography color="#5E6F00" fontWeight="600" fontSize="56px">
-          Barbati Fitness
+          Navas Fitness
       </Typography>
       <Typography color='#6B6B6B' fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="13px" mt="15px">
         Suda, Sorridi <br /> e Ripeti

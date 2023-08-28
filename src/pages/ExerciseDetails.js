@@ -9,8 +9,10 @@ import SimilarExercises from "../components/SimilarExercises";
 
 const ExerciseDetails = () => {
 
-  const [exerciseVideos, setExerciseVideos] = useState('')
-  const [exerciseDetail, setExerciseDetail] = useState({});
+  const [exerciseVideos, setExerciseVideos] = useState({})
+  const [exerciseDetail, setExerciseDetail] = useState([]);
+  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
+  const [equipmentExercises, setEquipmentExercises] = useState([])
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,15 +20,29 @@ const ExerciseDetails = () => {
       const exerciseDbUrl = 'https://exercisedb.p.rapidapi.com';
       const youTubeSearchUrl = 'https://youtube-search-and-download.p.rapidapi.com';
 
+      // fetch = state
+
       const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions);
   
       setExerciseDetail(exerciseDetailData);
 
       // youtube fetch
       const exerciseVideoData = await fetchData(`${youTubeSearchUrl}/search?query=${exerciseDetailData.name}`, youTubeOptions);
+
       setExerciseVideos(exerciseVideoData.contents)
-    }
-    
+
+      // similar exercises
+      const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`, exerciseOptions);
+
+      setTargetMuscleExercises(targetMuscleExercisesData)
+
+      // similar equipment exercises
+      const equimentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`, exerciseOptions)
+
+      setEquipmentExercises(equimentExercisesData)
+
+    };
+
     fetchExercisesData();
   }, [id])
 
@@ -34,7 +50,7 @@ const ExerciseDetails = () => {
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
-      <SimilarExercises />
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises} equipmentExercises={equipmentExercises} />
     </Box>
   )
 }

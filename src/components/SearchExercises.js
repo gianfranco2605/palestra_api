@@ -27,6 +27,7 @@ const SearchExercises = ( {setExercises, bodyPart, setBodyPart } ) => {
       );
       setSearch('');
       setExercises(searchedExercises);
+      
     }
   }
 
@@ -44,7 +45,7 @@ const SearchExercises = ( {setExercises, bodyPart, setBodyPart } ) => {
           height='76px'
           value= {search}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
-          placeholder='Cerca Esercizi'
+          placeholder='biceps, shoulder, upper, etc...'
           type='text'
         />
         <Button 
@@ -58,13 +59,13 @@ const SearchExercises = ( {setExercises, bodyPart, setBodyPart } ) => {
             fontSize: { lg: '20px', xs: '14px' },
             height: '56px',
             position: 'absolute',
-            right: '0',
+            right: '0',          
            }}
            onClick={handleSearch}
-          >Cerca</Button>
+          ><a href="#exercises" style={{textDecoration: 'none', color: '#5E6F00', scroll: 'smooth'}}>Cerca</a></Button>
       </Box>
       <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
-        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} isBodyParts />
       </Box>
     </Stack>
   )
